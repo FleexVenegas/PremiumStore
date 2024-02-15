@@ -6,10 +6,7 @@
         margin-left: 8px;
     }
 
-    input[type="number"] {
-        -moz-appearance: textfield;
-        appearance: textfield;
-    }
+   
 
     .input {
         width: 100%;
@@ -21,5 +18,20 @@
         padding: 0 7px;
         font-size: 14px;
         border: 1px solid #e89998;
+    }
+
+
+    // Quita los botones del input tipo number
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        -moz-appearance:textfield;
+        appearance: none;
+        margin: 0; 
+    }
+
+    input[type=number] {  
+        -moz-appearance:textfield;
+        appearance: none;
     }
 }

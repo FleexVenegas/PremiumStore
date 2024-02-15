@@ -56,8 +56,8 @@ const Contact = () => {
             </div>
             <form onSubmit={handleSubmit} className="c-form">
                 <div className="cnt-inputs">
-                <Input text="Full name" name="fullname" className="f-input" placeholder="Full name" onChange={handleChange} />
-                <Input className="f-input" name="phone" type="number" text="Phone number" placeholder="Phone number" onChange={handleChange} />
+                    <Input text="Full name" name="fullname" className="f-input" placeholder="Full name" onChange={handleChange} />
+                    <Input className="f-input" name="phone" type="number" text="Phone number" placeholder="Phone number" onChange={handleChange} />
                 </div>
                 <Input type="email" name="email" className="f-input" text="Email" placeholder="Email" onChange={handleChange} />
                 <TextArea text="Leave a comment" name="comment" placeholder="Leave a comment" onChange={handleChange} />

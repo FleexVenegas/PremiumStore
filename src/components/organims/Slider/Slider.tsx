@@ -12,19 +12,19 @@ import Promo4 from '../../../assets/images/promo4.png'
 
 const Slider = () => {
 
-  // Este arreglo contiene todas las imagenes que se mostraraán en el carrusel
+  // Este arreglo contiene todas las imagenes que se muestrán en el carrusel
     const images = [
-        { id: 1, alt: 'image 1', src: Promo1 },
-        { id: 2, alt: 'image 2', src: Promo2 },
-        { id: 3, alt: 'image 3', src: Promo3 },
-        { id: 4, alt: 'image 3', src: Promo4 },
+        { id: 1, src: Promo1 },
+        { id: 2, src: Promo2 },
+        { id: 3, src: Promo3 },
+        { id: 4, src: Promo4 },
       ];
 
   return (
     <Carousel showStatus={false} showThumbs={false} infiniteLoop autoPlay interval={4000} className='Slider_'>
-       {images.map((image, index) => (
+       {images.map((_, index) => (
           <div key={index} className='s-cntImage'>
-            <img alt={image.alt} src={image.src} className='s-img' />
+            <img src={_.src} alt="" className='s-img' />
           </div>
       ))}
     </Carousel>
