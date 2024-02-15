@@ -39,7 +39,13 @@ const Contact = () => {
   // Desde aquí podemos enviar los datos al servidor
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    alert("Data sent correctly")
     console.log(contactInfo)
+    
+    // Esperamos dos segundos y limpiamos lo datos de los inputs
+    setTimeout(() => {
+      setContactInfo({ fullname: "", phone: "", email: "", comment: "" });
+    }, 2000)
   };
 
 
@@ -56,11 +62,11 @@ const Contact = () => {
             </div>
             <form onSubmit={handleSubmit} className="c-form">
                 <div className="cnt-inputs">
-                    <Input text="Full name" name="fullname" className="f-input" placeholder="Full name" onChange={handleChange} />
-                    <Input className="f-input" name="phone" type="number" text="Phone number" placeholder="Phone number" onChange={handleChange} />
+                    <Input text="Full name" value={contactInfo.fullname} name="fullname" className="f-input" placeholder="Full name" onChange={handleChange} />
+                    <Input className="f-input" value={contactInfo.phone} name="phone" type="number" text="Phone number" placeholder="Phone number" onChange={handleChange} />
                 </div>
-                <Input type="email" name="email" className="f-input" text="Email" placeholder="Email" onChange={handleChange} />
-                <TextArea text="Leave a comment" name="comment" placeholder="Leave a comment" onChange={handleChange} />
+                <Input type="email" value={contactInfo.email} name="email" className="f-input" text="Email" placeholder="Email" onChange={handleChange} />
+                <TextArea text="Leave a comment" value={contactInfo.comment} name="comment" placeholder="Leave a comment" onChange={handleChange} />
                 <Button text="Send" submit className="btn-submit" />
             </form>
         </div>
