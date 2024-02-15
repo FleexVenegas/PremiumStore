@@ -8,14 +8,9 @@ const MainViewSkeleton = () => {
   return (
     <div className='MainDiv' style={{padding: 30, paddingTop: 50, display: "flex", flexDirection: 'column', gap: 120}}>
       <div style={{width: "100%", display: "flex", flexDirection: 'column', alignItems: "center", gap: 25}}>
-
-        {[...Array(1)].map((_, idx) => (
-          <Skeleton key={idx} width={350} height={15} />
-        ))}
-
+        <Skeleton width={350} height={15} />
         <Skeleton width={1300} height={500} className='skeletonBanner'/>
-        <Skeleton width={300} height={200} className='skeletonBanner-movil'/>
-          
+        <Skeleton width={300} height={200} className='skeletonBanner-movil'/>   
       </div>
 
       <div style={{width: "100%", display: "flex", flexDirection: "column", gap: 20}}>
@@ -23,8 +18,8 @@ const MainViewSkeleton = () => {
         <div style={{display: 'flex', flexWrap: "wrap", gap: 20, justifyContent: 'space-evenly'}}>
 
             {[...Array(5)].map((_, idx) => (
-              <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
-                <Skeleton key={idx} width={300} height={250}/>
+              <div key={idx} style={{display: 'flex', flexDirection: 'column', gap: 10}}>
+                <Skeleton width={300} height={250}/>
 
                 {[...Array(3)].map((_, indx) => (
                   <Skeleton key={indx} width={200} height={30}/>
