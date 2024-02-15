@@ -1,0 +1,25 @@
+.Button {
+    width: 210px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 7px;
+    cursor: pointer;
+
+    &.submit {
+        background: #DAA520;
+
+        &:hover {
+            transition: 0.5s;
+            color: #000;
+            background: unset;
+            border: 2px solid #d69f12;
+        }
+    }
+
+   
+}

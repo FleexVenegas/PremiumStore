@@ -1,0 +1,18 @@
+.Slider_{
+
+
+    .s-cntImage{
+        width: 100%;
+
+        .s-img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+
+            @media (max-width: 768px) {
+                height: 300px;
+                object-fit: contain;
+            }
+        }
+    }
+}

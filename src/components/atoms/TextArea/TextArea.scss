@@ -1,0 +1,22 @@
+.TextArea {
+
+    color: rgba(0, 0, 0, 0.5);
+
+    label {
+        margin-left: 8px;
+    }
+
+    .text-area {
+        border: 1px solid #e89998;
+        border-radius: 5px;
+        font-size: 14px;
+        height: 150px;
+        max-height: 168px;
+        min-height: 150px;
+        margin-top: 8px;
+        outline: none;
+        padding: 8px;
+        resize: none;
+        width: 100%;
+    }
+}

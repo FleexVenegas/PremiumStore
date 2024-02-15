@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1{
+  font-size: 35px;
+  color: #DAA520;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #7f7f7f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body.noScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #7f7f7f;
+  border-radius: 10px;
+  border: 0 solid #ffffff;
+}
+
+
+body {
+  font-family: "Metropolis", sans-serif;
+  /* background: #f5f5f5; */
+  /* background: #f1f5f9; */
+  /* background: black; */
+  font-size: 15px;
+}
+
+
+/* Esta es una clase para manejar el estilo de las componentes Input si estan vacios */
+.emptyField{
+  border-bottom: 2px solid red;
+}
