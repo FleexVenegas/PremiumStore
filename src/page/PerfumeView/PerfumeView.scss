@@ -1,4 +1,4 @@
-.PerfumeView{
+.PerfumeView {
     width: 100%;
     min-height: calc(100vh - 190px);
     padding: 100px;
@@ -6,8 +6,13 @@
     flex-direction: column;
     gap: 100px;
     position: relative;
-    
-    .p-cntHeader{
+
+    @media (max-width: 768px) {
+        padding: 15px;
+        padding: 100px 15px;
+    }
+
+    .p-cntHeader {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
@@ -15,125 +20,147 @@
         grid-row-gap: 0px;
         font-size: 17px;
 
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
 
-        .p-left{
-            grid-area: 1 / 1 / 2 / 2; 
+
+        .p-left {
+            grid-area: 1 / 1 / 2 / 2;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            .p-cntImage{
+            .p-cntImage {
                 width: 400px;
                 height: 400px;
-              
-                .p-img{
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    
+
+                }
+
+                .p-img {
                     width: 100%;
                     height: 100%;
                     border-radius: 8px;
                     object-fit: cover;
                     transition: transform 0.3s ease-in-out;
 
-                   
+
                 }
             }
-    
+
         }
-    
-        .p-right{
-            grid-area: 1 / 2 / 2 / 3; 
-            
-            .p-cnt_inside{
+
+        .p-right {
+            grid-area: 1 / 2 / 2 / 3;
+
+            .p-cnt_inside {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-    
-                .p-cntDatas{
+
+                .p-cntDatas {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
 
-                    .p-code{
+                    .p-code {
                         color: rgba(0, 0, 0, 0.5);
-                        span{
+
+                        span {
                             font-weight: bold;
                         }
                     }
                 }
-        
-                .p-cntPrice{
+
+                .p-cntPrice {
                     font-size: 20px;
                     color: #7ec08b;
                     // color: #ff0000;
                 }
-        
-                .p-cnTamnio{
+
+                .p-cnTamnio {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
                     color: rgba(0, 0, 0, 0.5);
                     font-weight: bold;
-    
-                    .p-block{
+
+                    .p-block {
                         display: flex;
                         gap: 15px;
-    
-                        .p-mincard{
+                        
+                        @media (max-width: 768px) {
+                            justify-content: center;
+                            
+                        }
+
+                        .p-mincard {
                             cursor: pointer;
                             color: rgba(0, 0, 0, 0.5);
                             border: 1px solid #ffd8e1;
                             padding: 10px;
                             border-radius: 7px;
                             font-weight: 100;
-                        
-                            
-                            &.p-selected{
-                                font-weight: bold;
+
+
+                            &.p-selected {
                                 background: #ffd8e1;
                             }
                         }
                     }
-    
+
                 }
-        
-                .p-cntDescription{
+
+                .p-cntDescription {
                     font-size: 17px;
                     font-weight: bold;
                     color: rgba(0, 0, 0, 0.5);
-                
-                    .p-descrip{
+
+                    .p-descrip {
                         text-align: justify;
                         width: 70%;
                         font-weight: 300;
                         margin-top: 10px;
                         line-height: 25px;
+
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
                     }
                 }
             }
-    
+
         }
     }
 
-    .p-cnt_similar{
+    .p-cnt_similar {
         display: flex;
         flex-direction: column;
         gap: 50px;
 
-        .p-titleSimilar{
+        .p-titleSimilar {
             color: #DAA520;
             font-size: 30px;
         }
 
-        .p-cntInside{
+        .p-cntInside {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            row-gap: 20px;
 
-            .similar-products{
-                &::after{
+            .similar-products {
+                &::after {
                     display: none;
                 }
 
-                &::before{
+                &::before {
                     display: none;
                 }
             }

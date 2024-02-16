@@ -1,21 +1,12 @@
 import { useEffect, useState } from 'react'
 import MainDiv from '../../components/molecules/MainDiv/MainDiv'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // Styles
 import "./PerfumeView.scss"
 
 // Components
 import StarRatings from '../../components/molecules/StarRatings/StarRatings'
-
-//Assets
-import Top1 from '../../assets/images/top1.jpg'
-import Top2 from '../../assets/images/black_opium.jpg'
-import Top3 from '../../assets/images/fresh.png'
-import Top4 from '../../assets/images/davidoff.png'
-import Top5 from '../../assets/images/Louis.jpg'
-import Top6 from '../../assets/images/sauvage_Dior.jpg'
-import Top7 from '../../assets/images/MacOs.jpg'
 import ReturnBtn from '../../components/atoms/ReturnBtn/ReturnBtn'
 import PerfumeMenu from '../../components/molecules/PerfumeMenu/PerfumeMenu'
 
@@ -37,7 +28,6 @@ interface perfumeStateProps{
 const PerfumeView = () => {
     const { id, name, image } = useParams()
     const originalPath = image?.replace(/-/g, '/');
-    const navigate = useNavigate()
 
     const [perfumeDetail, setPerfumeDetail] = useState<perfumeStateProps[]>([
         {
@@ -72,51 +62,6 @@ const PerfumeView = () => {
     }, [name])
     
 
-    const similarProducts = [
-        {
-            id: "4a89c354-9e78-42e1-a6d7-f2c3b1f5d8a2",
-            image: Top2,
-            name: "Black Opium V2",
-            price: "1,500.00",
-            star: 5
-        },
-        {
-            id: "f7d2a1b8-5eac-4c61-8b5a-3e9d0f8c6a94",
-            image: Top3,
-            name: "Fresh As Citrus",
-            price: "2,500.00",
-            star: 5
-        },
-        {
-            id: "c8f6d97b-2fe9-4d8d-aa7c-651e8abf3a61",
-            image: Top4,
-            name: "DAVIDOFF Cool Water",
-            price: "1,800.00",
-            star: 5
-        },
-        {
-            id: "1b3e6f80-80a3-432d-bd88-ebf0a5a72f9f",
-            image: Top5,
-            name: "Louis Vuitton ",
-            price: "3,500.00",
-            star: 5
-        },
-        {
-            id: "e2a4cfab-36c1-4a5e-8156-927db146e91d",
-            image: Top6,
-            name: "Sauvage Dior",
-            price: "1,500.00",
-            star: 5
-        },
-        {
-            id: "9d583f79-1f33-4d7e-bb93-af6e398c2e11",
-            image: Top7,
-            name: "MacOs",
-            price: "3,000.00",
-            star: 5
-        },
-    ]
-
     //Esta función se encarga de cambiar los valores que tiene sizes
     const handleSizeClick = (perfumeId: string | undefined, sizeId: number) => {
         setPerfumeDetail((prevPerfumeDetail) =>
@@ -133,7 +78,6 @@ const PerfumeView = () => {
         );
     };
 
-    console.log(originalPath)
 
   return (
         <MainDiv className='PerfumeView'>
@@ -180,7 +124,7 @@ const PerfumeView = () => {
             <div className="p-cnt_similar">
                 <h2 className='p-titleSimilar'>Similar products</h2>
                 <div className='p-cntInside'>
-                    <PerfumeMenu classTop='similar-products'/>
+                    <PerfumeMenu classTop='similar-products' scroll/>
                 </div>
             </div>
         </MainDiv>
