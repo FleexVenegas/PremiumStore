@@ -10,7 +10,7 @@ import Plane from '../../../assets/icons/avion-de-papel.png'
 import Input from "../../../components/atoms/Input/Input";
 import TextArea from "../../../components/atoms/TextArea/TextArea";
 import Button from "../../../components/atoms/Button/Button";
-import { Successfully, Warning } from "../../../utilities/SweetAlert/SweetAlertModal";
+import { Successfully } from "../../../utilities/SweetAlert/SweetAlertModal";
 
 // Interfaces
 interface stateInfo{
@@ -42,13 +42,11 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-
-        // Successfully("Datos enviados correctamente")
         Successfully("Datos enviados correctamente")
 
       // Esperamos dos segundos y limpiamos lo datos de los inputs
       setTimeout(() => {
-        // setContactInfo({ fullname: "", phone: "", email: "", comment: "" });
+        setContactInfo({ fullname: "", phone: "", email: "", comment: "" });
       }, 2000)
       
     } catch (error) {
@@ -71,11 +69,15 @@ const Contact = () => {
             </div>
             <form onSubmit={handleSubmit} className="c-form">
                 <div className="cnt-inputs">
-                    <Input text="Full name" value={contactInfo.fullname} name="fullname" className="f-input" placeholder="Full name" onChange={handleChange} />
-                    <Input className="f-input" value={contactInfo.phone} name="phone" type="number" text="Phone number" placeholder="Phone number" onChange={handleChange} />
+                    <Input text="Full name" value={contactInfo.fullname} name="fullname" className="f-input" 
+                      placeholder="Full name" onChange={handleChange} />
+                    <Input className="f-input" value={contactInfo.phone} name="phone" type="number" text="Phone number" 
+                      placeholder="Phone number" onChange={handleChange} />
                 </div>
-                <Input type="email" value={contactInfo.email} name="email" className="f-input" text="Email" placeholder="Email" onChange={handleChange} />
-                <TextArea text="Leave a comment" value={contactInfo.comment} name="comment" placeholder="Leave a comment" onChange={handleChange} />
+                <Input type="email" value={contactInfo.email} name="email" className="f-input" text="Email" 
+                    placeholder="Email" onChange={handleChange} />
+                <TextArea text="Leave a comment" value={contactInfo.comment} name="comment" 
+                    placeholder="Leave a comment" onChange={handleChange} />
                 <Button text="Send" submit className="btn-submit" />
             </form>
         </div>
