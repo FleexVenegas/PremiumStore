@@ -10,6 +10,7 @@ import Plane from '../../../assets/icons/avion-de-papel.png'
 import Input from "../../../components/atoms/Input/Input";
 import TextArea from "../../../components/atoms/TextArea/TextArea";
 import Button from "../../../components/atoms/Button/Button";
+import { Successfully, Warning } from "../../../utilities/SweetAlert/SweetAlertModal";
 
 // Interfaces
 interface stateInfo{
@@ -39,13 +40,21 @@ const Contact = () => {
   // Desde aquí podemos enviar los datos al servidor
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Data sent correctly")
-    console.log(contactInfo)
+
+    try {
+
+        // Successfully("Datos enviados correctamente")
+        Successfully("Datos enviados correctamente")
+
+      // Esperamos dos segundos y limpiamos lo datos de los inputs
+      setTimeout(() => {
+        // setContactInfo({ fullname: "", phone: "", email: "", comment: "" });
+      }, 2000)
+      
+    } catch (error) {
+      console.log()
+    }
     
-    // Esperamos dos segundos y limpiamos lo datos de los inputs
-    setTimeout(() => {
-      setContactInfo({ fullname: "", phone: "", email: "", comment: "" });
-    }, 2000)
   };
 
 
