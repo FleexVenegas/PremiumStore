@@ -1,43 +1,77 @@
-.CommentCard {
-    width: 500px;
-    padding: 25px;
+.CommetCard {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
-    border: 2px solid #daa520;
+    gap: 30px;
 
-    @media (max-width: 768px) {
-        width: 100%;
-    }
-
-    .c-header {
+    .c-cntCommetCard{
         display: flex;
-        gap: 15px;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 30px;
 
-        .c-image {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 50%;
+        height: 530px;
+        overflow: hidden;
+
+        &.co-seeMore{
+            height: unset;
+            overflow: unset;
         }
 
-        .c-cntStarName {
+
+        .co-card{
+            width: 500px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            border-radius: 8px;
+            border: 2px solid #daa520;
 
-            .c-name {
-                font-size: 17px;
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
+            .c-header {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+        
+                .c-image {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+        
+                .c-cntStarName {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+        
+                    .c-name {
+                        font-size: 17px;
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        
+            .c-comment {
                 color: rgba(0, 0, 0, 0.5);
+                font-size: 17px;
+                text-align: justify;
+                padding-left: 95px;
             }
         }
     }
 
-    .c-comment {
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 17px;
-        text-align: justify;
-        padding-left: 95px;
+    .co-button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
+
+
+    
+
 }
