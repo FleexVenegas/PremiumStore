@@ -20,7 +20,7 @@ const CardCategory = () => {
 
     const handleNavigate = (name: string) => {
         const nameLowerCase = name.toLowerCase()
-        navigate(`/category/${nameLowerCase}`)
+        navigate(`/fragrance/category/${nameLowerCase}`)
     }
 
   return (

@@ -3,13 +3,15 @@ import { Route, Routes } from 'react-router-dom'
 
 // Lazy
 const MainView = lazy(() => import('../../../page/MainView/MainView'))
+const Category = lazy(() => import('../../../page/Category/Category'))
+const PerfumeView = lazy(() => import('../../../page/PerfumeView/PerfumeView'));
+const MensCategory = lazy(() => import('../../../page/MensCategory/MensCategory'));
+const ChildrensCategory = lazy(() => import('../../../page/ChildrensCategory/ChildrensCategory'));
 
 //Skeletons
 import MainViewSkeleton from '../../../page/MainView/MainViewSkeleton'
-import PerfumeView from '../../../page/PerfumeView/PerfumeView'
-import Category from '../../../page/Category/Category'
-
-
+import CategorySkeleton from '../../../page/Category/CategorySkeleton'
+import PerfumeViewSkeleton from '../../../page/PerfumeView/PerfumeViewSkeleton';
 
 const MainRoutes = () => {
   return (
@@ -25,16 +27,32 @@ const MainRoutes = () => {
         <Route
             path='/fragrance/:id/:name/:image'
             element={
-                <Suspense fallback={<></>}>
+                <Suspense fallback={<PerfumeViewSkeleton />}>
                     <PerfumeView />
                 </Suspense>
             }
         />
         <Route
-            path='/category/:name'
+            path='/fragrance/category/woman'
             element={
-                <Suspense fallback={<></>}>
+                <Suspense fallback={<CategorySkeleton />}>
                     <Category />
+                </Suspense>
+            }
+        />
+        <Route
+            path='/fragrance/category/man'
+            element={
+                <Suspense fallback={<CategorySkeleton />}>
+                    <MensCategory />
+                </Suspense>
+            }
+        />
+        <Route
+            path='/fragrance/category/children'
+            element={
+                <Suspense fallback={<CategorySkeleton />}>
+                    <ChildrensCategory />
                 </Suspense>
             }
         />
