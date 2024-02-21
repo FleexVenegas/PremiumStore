@@ -3,7 +3,7 @@
 Objetivo general es crear una Landing page responsive llamativa con un buen código con buenas prácticas para que el departamento de sistemas pueda evaluarlo.
 
 
-###### Los puntos visuales que tiene que llevar la Landing page responsive son:
+#### Los puntos visuales que tiene que llevar la Landing page responsive son:
 - Un menú principal que por vínculos interactúe con las secciones que cuenta la página.
 - Un slider principal con promociones
 - Un pequeño apartado con 5 perfumes top.
