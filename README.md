@@ -42,5 +42,21 @@ Objetivo general es crear una Landing page responsive llamativa con un buen cód
 
 #### React-loading-skeleton:
 - Una librería de React que simplifica la creación de esqueletos de carga (skeletons) para mejorar la experiencia del usuario mientras se espera la carga de contenido, proporcionando una interfaz visual que indica que la información está en proceso de carga.
-  
+
 `<link>`: https://www.npmjs.com/package/react-loading-skeleton
+
+## Instrucciones de Configuración
+Para poner en marcha la aplicación, sigue estos sencillos pasos:
+#### 1. Descargar Dependencias
+- Asegúrate de tener Node.js instalado en tu sistema. Luego, abre una terminal en la raíz del proyecto y ejecuta el siguiente comando para instalar las dependencias:
+
+`> npm install`
+
+#### 2. Ejecutar la Aplicación en Modo Desarrollo
+- Una vez que las dependencias se hayan instalado correctamente, ejecuta el siguiente comando para iniciar la aplicación en modo de desarrollo:
+
+`> npm run dev`
+
+<p>
+	Este comando utilizará Vite.js para compilar y servir la aplicación en un entorno de desarrollo local. Abre tu navegador y visita http://localhost:5173 para ver la aplicación en acción.
+</p>
