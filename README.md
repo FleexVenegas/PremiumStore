@@ -22,15 +22,25 @@ Objetivo general es crear una Landing page responsive llamativa con un buen cód
 - Vite.js: Un entorno de desarrollo rápido para aplicaciones web basado en JavaScript y 	TypeScript que ofrece una experiencia de desarrollo ágil y eficiente.
 - Sass para los estilos:
 
+`<link>` : <https://vitejs.dev/guide/>
 
 #### Sass (Syntactically Awesome Stylesheets):
 - Un preprocesador CSS que facilita la escritura de estilos más eficientes y mantenibles, mediante la utilización de variables, anidamiento y otros features.
 
+`<link>` : <https://sass-lang.com/>
+
 #### React-star-ratings:
 - Una librería de React que proporciona componentes listos para usar para la implementación de sistemas de clasificación mediante estrellas, facilitando la creación de elementos de rating.
+
+`<link>`: https://www.npmjs.com/package/react-star-ratings
 
 #### React-responsive-carousel:
 -  Una librería de React especializada en la creación de carousels o sliders responsivos, ideal para presentar imágenes de promoción de manera atractiva y adaptativa a diferentes dispositivos.
 
+`<link>`: https://www.npmjs.com/package/react-responsive-carousel
+
+
 #### React-loading-skeleton:
 - Una librería de React que simplifica la creación de esqueletos de carga (skeletons) para mejorar la experiencia del usuario mientras se espera la carga de contenido, proporcionando una interfaz visual que indica que la información está en proceso de carga.
+  
+`<link>`: https://www.npmjs.com/package/react-loading-skeleton
