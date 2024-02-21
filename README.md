@@ -22,7 +22,6 @@ Objetivo general es crear una Landing page responsive llamativa con un buen cód
 - Vite.js: Un entorno de desarrollo rápido para aplicaciones web basado en JavaScript y 	TypeScript que ofrece una experiencia de desarrollo ágil y eficiente.
 - Sass para los estilos:
 
-![](https://vitejs.dev/logo.svg)
 
 #### Sass (Syntactically Awesome Stylesheets):
 - Un preprocesador CSS que facilita la escritura de estilos más eficientes y mantenibles, mediante la utilización de variables, anidamiento y otros features.
