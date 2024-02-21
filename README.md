@@ -1,8 +1,37 @@
-# React + TypeScript + Vite
+# Premium Store 🏭
 
-Abre tu terminal.
-Navega al directorio del proyecto.
-Ejecuta el siguiente comando para instalar las dependencias:
-## npm install
-Una vez que la instalación haya finalizado con éxito, ejecuta el siguiente comando para iniciar el servidor de desarrollo:
-## npm run dev
+Objetivo general es crear una Landing page responsive llamativa con un buen código con buenas prácticas para que el departamento de sistemas pueda evaluarlo.
+
+
+###### Los puntos visuales que tiene que llevar la Landing page responsive son:
+- Un menú principal que por vínculos interactúe con las secciones que cuenta la página.
+- Un slider principal con promociones
+- Un pequeño apartado con 5 perfumes top.
+- Un apartado de categorización por genero Dama, Caballero y Niños
+- Un apartado de reseñas, unos 3 comentarios.
+- Un apartado de contáctanos.
+- Botón flotante de whatsapp.
+- Footer contemplando botones de redes sociales.
+
+## Tecnologias
+
+##### React con TypeScript en Vite.js:
+
+- React: Una biblioteca de JavaScript para construir interfaces de usuario, permitiendo el desarrollo de componentes reutilizables.
+- TypeScript: Un superset de JavaScript que añade tipado estático al lenguaje, mejorando la robustez y mantenibilidad del código.
+- Vite.js: Un entorno de desarrollo rápido para aplicaciones web basado en JavaScript y 	TypeScript que ofrece una experiencia de desarrollo ágil y eficiente.
+- Sass para los estilos:
+
+![](https://vitejs.dev/logo.svg)
+
+#### Sass (Syntactically Awesome Stylesheets):
+- Un preprocesador CSS que facilita la escritura de estilos más eficientes y mantenibles, mediante la utilización de variables, anidamiento y otros features.
+
+#### React-star-ratings:
+- Una librería de React que proporciona componentes listos para usar para la implementación de sistemas de clasificación mediante estrellas, facilitando la creación de elementos de rating.
+
+#### React-responsive-carousel:
+-  Una librería de React especializada en la creación de carousels o sliders responsivos, ideal para presentar imágenes de promoción de manera atractiva y adaptativa a diferentes dispositivos.
+
+#### React-loading-skeleton:
+- Una librería de React que simplifica la creación de esqueletos de carga (skeletons) para mejorar la experiencia del usuario mientras se espera la carga de contenido, proporcionando una interfaz visual que indica que la información está en proceso de carga.
