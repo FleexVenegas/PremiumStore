@@ -1,6 +1,6 @@
 # Premium Store 🏭
 
-Objetivo general es crear una Landing page responsive llamativa con un buen código con buenas prácticas para que el departamento de sistemas pueda evaluarlo.
+Objetivo general es crear una Landing page responsive llamativa con un buen código con buenas prácticas para que el departamento de sistemas.
 
 
 #### Los puntos visuales que tiene que llevar la Landing page responsive son:
