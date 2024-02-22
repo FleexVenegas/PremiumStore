@@ -1,19 +1,23 @@
-//styles
-import { ReactNode, useEffect, useState } from "react"
-import "./Layout.scss"
-import Header from "../../molecules/Header/Header"
-import Footer from "../../molecules/Footer/Footer"
-import HeaderSkeleton from "../../molecules/Header/HeaderSkeleton"
-import FooterSkeleton from "../../molecules/Footer/FooterSkeleton"
+import { ReactNode, useEffect, useRef, useState } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
-interface LayoutProps{
-    children: ReactNode
+//styles
+import "./Layout.scss";
+import Header from "../../molecules/Header/Header";
+import Footer from "../../molecules/Footer/Footer";
+import HeaderSkeleton from "../../molecules/Header/HeaderSkeleton";
+import FooterSkeleton from "../../molecules/Footer/FooterSkeleton";
+
+interface LayoutProps {
+  children: ReactNode;
 }
 
-
 const Layout = ({ children }: LayoutProps) => {
-
-  const [loading, setLoading] = useState(true)
+  
+  const [loading, setLoading] = useState(true);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
 
   useEffect(() => {
     // Simula una carga asincrónica
@@ -26,15 +30,32 @@ const Layout = ({ children }: LayoutProps) => {
     fakeLoad();
   }, []);
 
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   return (
-    <div className="Layout">
+    <div ref={ref} className="Layout">
+      {loading ? <HeaderSkeleton /> : <Header />}
 
-      { loading ? (<HeaderSkeleton />) : (<Header />) }
-          {children}
-      { loading ? (<FooterSkeleton />) : (<Footer />) }
+      <motion.div
+        className="MainDiv"
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.5, delay: 0.25 }}
+      >
+        {children}
+      </motion.div>
+
+      {loading ? <FooterSkeleton /> : <Footer />}
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
