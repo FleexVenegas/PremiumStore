@@ -42,7 +42,6 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      console.log(contactInfo)
         Successfully("Message sent succesfully! We appreciate your interest and will respond shortly.")
 
       // Esperamos dos segundos y limpiamos lo datos de los inputs
@@ -51,7 +50,7 @@ const Contact = () => {
       }, 2000)
       
     } catch (error) {
-      console.log()
+      console.log(error)
     }
     
   };

@@ -1,3 +1,6 @@
+import { useState } from "react"
+
+
 //Styles
 import "./CommentCard.scss"
 
@@ -15,7 +18,6 @@ import Man4 from '../../../assets/images/man4.jfif'
 //Components
 import StarRatings from "../StarRatings/StarRatings"
 import Button from "../../atoms/Button/Button"
-import { useState } from "react"
 
 const CommentCard = () => {
 
