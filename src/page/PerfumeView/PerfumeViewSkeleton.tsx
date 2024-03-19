@@ -46,8 +46,8 @@ const PerfumeViewSkeleton = () => {
                                 <div className='p-cnTamnio'>
                                     <Skeleton width={50} height={10}/>
                                     <div className='p-block'>
-                                        {_.sizes.map((sz, idx) => (
-                                            <Skeleton key={idx} width={70} height={40}/>
+                                        {_.sizes.map((sz) => (
+                                            <Skeleton key={sz.id} width={70} height={40}/>
                                         ))}
                                     </div>
                                 </div>

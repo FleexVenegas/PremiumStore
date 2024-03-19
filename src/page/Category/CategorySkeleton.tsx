@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 
 // Components
