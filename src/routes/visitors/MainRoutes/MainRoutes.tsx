@@ -25,7 +25,7 @@ const MainRoutes = () => {
             }
         />
         <Route
-            path='/fragrance/:id/:name/:image'
+            path='/fragrance/:id/:name'
             element={
                 <Suspense fallback={<PerfumeViewSkeleton />}>
                     <PerfumeView />
