@@ -17,6 +17,8 @@ import Top8 from "../../assets/images/children/children8.avif";
 import Top9 from "../../assets/images/children/children9.avif";
 
 import "./ChildrensCategory.scss";
+import { useStateContext } from "../../context/ContextProvider";
+import { useLocation } from "react-router-dom";
 const ChildrensCategory = () => {
   // Toda la información del top de perfumes
   const dataFragrance = [
@@ -102,6 +104,13 @@ const ChildrensCategory = () => {
       top: false,
     },
   ];
+
+  const { setPath } = useStateContext();
+    const location = useLocation();
+
+    useEffect(() => {
+        setPath(location.pathname);
+    }, []);
 
   useEffect(() => {
     const scrollTop = () => {

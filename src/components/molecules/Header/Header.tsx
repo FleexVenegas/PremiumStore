@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 //Styles
 import "./Header.scss";
@@ -34,9 +34,13 @@ const Header = () => {
         setOpenMenu(false);
     };
 
+    const navigate = useNavigate();
+
     return (
         <header className="Header Header_">
-            <h1 className="h-logo">Premium Store</h1>
+            <h1 className="h-logo" onClick={() => navigate("/")}>
+                Premium Store
+            </h1>
 
             {!path && (
                 <nav className="h_cnt-link">

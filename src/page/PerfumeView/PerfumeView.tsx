@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import MainDiv from "../../components/molecules/MainDiv/MainDiv";
 import { useParams } from "react-router-dom";
 
 //Assets
@@ -13,9 +12,12 @@ import Top5 from "../../assets/images/Louis.jpg";
 import "./PerfumeView.scss";
 
 // Components
+import MainDiv from "../../components/molecules/MainDiv/MainDiv";
 import StarRatings from "../../components/molecules/StarRatings/StarRatings";
 import ReturnBtn from "../../components/atoms/ReturnBtn/ReturnBtn";
 import PerfumeMenu from "../../components/molecules/PerfumeMenu/PerfumeMenu";
+
+//Context
 import { useStateContext } from "../../context/ContextProvider";
 
 interface sizeProps {
@@ -36,7 +38,7 @@ interface perfumeStateProps {
 const PerfumeView = () => {
     const { id, name } = useParams();
 
-    const { urlImage } = useStateContext();
+    const { urlImage, path } = useStateContext();
 
     const [perfumeDetail, setPerfumeDetail] = useState<perfumeStateProps[]>([
         {
@@ -149,7 +151,7 @@ const PerfumeView = () => {
 
     return (
         <MainDiv className="PerfumeView">
-            <ReturnBtn url="/" />
+            <ReturnBtn url={path.length === 0 ? "/" : path} />
 
             <div className="p-cntHeader">
                 <div className="p-left">

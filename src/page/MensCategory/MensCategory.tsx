@@ -16,6 +16,8 @@ import Top8 from "../../assets/images/man/man8.avif";
 import Top9 from "../../assets/images/man/man9.avif";
 
 import "./MensCategory.scss";
+import { useStateContext } from "../../context/ContextProvider";
+import { useLocation } from "react-router-dom";
 const MensCategory = () => {
     // Toda la información del top de perfumes
     const dataFragrance = [
@@ -101,6 +103,13 @@ const MensCategory = () => {
             top: false,
         },
     ];
+
+    const { setPath } = useStateContext();
+    const location = useLocation();
+
+    useEffect(() => {
+        setPath(location.pathname);
+    }, []);
 
     useEffect(() => {
         const scrollTop = () => {
